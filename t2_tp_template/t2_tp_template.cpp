@@ -26,6 +26,7 @@ int main()
 	cout << "Entrez les valeurs de c1 et c2" << endl;
 	cin >> c1 >> c2;;
 	cout << maximum(c1, c2) << endl;
+	//
 }
 
 // Exécuter le programme : Ctrl+F5 ou menu Déboguer > Exécuter sans débogage
