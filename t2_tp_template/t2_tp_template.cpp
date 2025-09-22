@@ -4,29 +4,33 @@
 #include <iostream>
 using namespace std;
 
-template<class T>
-T maximum(T n1, T n2)
+template<class T1, class T2, class R>
+R moyenneTableau(T1 param1[], T2 param2)
 {
-	return (n1 > n2) ? n1 : n2;
+	int somme = 0;
+	float moyenne = 0;
+	for (int i = 0; i < param2; i++)
+	{
+		somme += param1[i];
+	}
+	return (somme / param2);
 }
 int main()
 {
-	int i1, i2;
-	float f1, f2;
-	char c1, c2;
+	int note;
+	int* t;
+	int tailleTableau = 0;
 
-	cout << "Test d'une fonction de comparaison 'template'" << endl;
+	cout << "Entrer la taille du tableau : " << endl;
+	cin >> tailleTableau;
+	t = new int[tailleTableau];
 
-	cout << "Entrez les valeurs de i1 et i2" << endl;
-	cin >> i1 >> i2;;
-	cout << maximum(i1, i2) << endl;
-	cout << "Entrez les valeurs de f1 et f2" << endl;
-	cin >> f1 >> f2;;
-	cout << maximum(f1, f2) << endl;
-	cout << "Entrez les valeurs de c1 et c2" << endl;
-	cin >> c1 >> c2;;
-	cout << maximum(c1, c2) << endl;
-	//
+	for (int i = 0; i < tailleTableau; i++)
+	{
+		cout << "Entrer la note numero " << i + 1 << " : " << endl;
+		cin >> note;
+	}
+	cout << moyenneTableau<int, int, float>(t, tailleTableau);
 }
 
 // Exécuter le programme : Ctrl+F5 ou menu Déboguer > Exécuter sans débogage
