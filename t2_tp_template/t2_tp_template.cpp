@@ -5,10 +5,9 @@
 using namespace std;
 
 template<class T1, class T2, class R>
-R moyenneTableau(T1 param1[], T2 param2)
+R moyenneTableau(T1 param1, T2 param2)
 {
-	int somme = 0;
-	float moyenne = 0;
+	R somme = 0;
 	for (int i = 0; i < param2; i++)
 	{
 		somme += param1[i];
@@ -17,7 +16,6 @@ R moyenneTableau(T1 param1[], T2 param2)
 }
 int main()
 {
-	int note;
 	int* t;
 	int tailleTableau = 0;
 
@@ -28,9 +26,9 @@ int main()
 	for (int i = 0; i < tailleTableau; i++)
 	{
 		cout << "Entrer la note numero " << i + 1 << " : " << endl;
-		cin >> note;
+		cin >> t[i];
 	}
-	cout << moyenneTableau<int, int, float>(t, tailleTableau);
+	cout << "Voici la moyenne : " << moyenneTableau<int*, int, float>(t, tailleTableau);
 }
 
 // Exécuter le programme : Ctrl+F5 ou menu Déboguer > Exécuter sans débogage
