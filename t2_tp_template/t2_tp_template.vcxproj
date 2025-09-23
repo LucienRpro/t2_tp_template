@@ -151,7 +151,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Calculatrice.cpp" />
     <ClCompile Include="t2_tp_template.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Calculatrice.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
